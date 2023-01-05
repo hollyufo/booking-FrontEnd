@@ -6,18 +6,22 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './component/header/header.component';
 import { HotelsComponent } from './component/hotels/hotels.component';
+import { HerosectionComponent } from './component/herosection/herosection.component';
+import { HomepageComponent } from './component/homepage/homepage.component';
 
 // Routes
 const AppRoutes: Routes = [
   { path: 'hotels', component: HotelsComponent },
-  { path: '', redirectTo: '/hotels', pathMatch: 'full' }
+  { path: '', component: HomepageComponent },
 ];
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    HotelsComponent
+    HotelsComponent,
+    HerosectionComponent,
+    HomepageComponent
   ],
   imports: [
     BrowserModule,
