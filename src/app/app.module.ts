@@ -1,32 +1,20 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { Router, RouterModule, Routes } from '@angular/router';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './component/header/header.component';
-import { HotelsComponent } from './component/hotels/hotels.component';
-import { HerosectionComponent } from './component/herosection/herosection.component';
-import { HomepageComponent } from './component/homepage/homepage.component';
-
-// Routes
-const AppRoutes: Routes = [
-  { path: 'hotels', component: HotelsComponent },
-  { path: '', component: HomepageComponent },
-];
+import { HeaderComponent } from './components/header/header.component';
+import { HerosectionComponent } from './components/herosection/herosection.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    HotelsComponent,
-    HerosectionComponent,
-    HomepageComponent
+    HerosectionComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
-    RouterModule.forRoot(AppRoutes)
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
