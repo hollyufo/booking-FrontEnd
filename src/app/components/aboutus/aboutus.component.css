@@ -1,0 +1,47 @@
+
+.aboutus-page-section {
+	padding-top: 0;
+	padding-bottom: 70px;
+}
+.about-page-text {
+	margin-bottom: 65px;
+}
+.about-page-text {
+	margin-bottom: 30px;
+}
+.about-page-text {
+	font-size: 44px;
+	color: #19191a;
+	margin-bottom: 18px;
+}
+.about-page-text  {
+	font-size: 18px;
+	color: #707079;
+	line-height: 28px;
+}
+.about-page-text {
+	list-style: none;
+	font-size: 20px;
+	color: #707079;
+	line-height: 42px;
+}
+.about-page-text{
+	color: #dfa974;
+	margin-right: 5px;
+}
+.about-page-services{
+	position: relative;
+	height: 420px;
+	border-radius: 5px;
+	margin-bottom: 30px;
+}
+.about-page-services {
+	position: absolute;
+	left: 0;
+	bottom: 40px;
+	width: 100%;
+	text-align: center;
+}
+.about-page-services {
+	color: #ffffff;
+}
