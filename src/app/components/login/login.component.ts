@@ -32,13 +32,11 @@ export class LoginComponent implements OnInit {
       };
       this.http.post(url, body).subscribe(
         (response) => {
-          console.log(response);
           // using the auth service to save the token in the local storage
           // converting the response into a json object
           const data = JSON.stringify(response);
           // parsing the json object
           const json = JSON.parse(data);
-          console.log(json.token);
           const authservice = new AuthserviceService();
           authservice.saveToken(json.token);
           // redirecting to the home page
