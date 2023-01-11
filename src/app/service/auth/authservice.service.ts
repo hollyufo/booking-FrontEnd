@@ -19,4 +19,8 @@ export class AuthserviceService {
   removeToken() {
     localStorage.removeItem('token');
   }
+  // check if the user is logged in
+  isLogedIn() {
+    return !!localStorage.getItem('token');
+  }
 }

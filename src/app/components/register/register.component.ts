@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 import { AuthserviceService } from 'src/app/service/auth/authservice.service';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
@@ -11,7 +12,7 @@ export class RegisterComponent implements OnInit {
 
   registerForm: FormGroup;
 
-  constructor(private formBuilder: FormBuilder, private http: HttpClient) {
+  constructor(private formBuilder: FormBuilder, private http: HttpClient, private router: Router) {
     this.registerForm = new FormGroup({});
    }
    ngOnInit(): void {
@@ -45,6 +46,8 @@ export class RegisterComponent implements OnInit {
           console.log(json.token);
           const authservice = new AuthserviceService();
           authservice.saveToken(json.token);
+          // redirecting to the home page
+          this.router.navigate(['/home']);
         },
         (error) => {
           // Handle registration error
