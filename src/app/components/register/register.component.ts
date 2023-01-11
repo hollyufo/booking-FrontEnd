@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
+import { AuthserviceService } from 'src/app/service/auth/authservice.service';
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
@@ -28,6 +29,7 @@ export class RegisterComponent implements OnInit {
       const body = {
         name: this.registerForm.get('firstName')?.value,
         lastName: this.registerForm.get('lastName')?.value,
+        userName: this.registerForm.get('userName')?.value,
         email: this.registerForm.get('email')?.value,
         password: this.registerForm.get('password')?.value
       };
@@ -35,6 +37,14 @@ export class RegisterComponent implements OnInit {
         (response) => {
           // Handle successful registration
           console.log(response);
+          // using the auth service to save the token in the local storage
+          // converting the response into a json object
+          const data = JSON.stringify(response);
+          // parsing the json object
+          const json = JSON.parse(data);
+          console.log(json.token);
+          const authservice = new AuthserviceService();
+          authservice.saveToken(json.token);
         },
         (error) => {
           // Handle registration error
