@@ -7,6 +7,11 @@ import { HeaderComponent } from './components/header/header.component';
 import { HerosectionComponent } from './components/herosection/herosection.component';
 import { HomeComponent } from './components/home/home.component';
 import { AboutusComponent } from './components/aboutus/aboutus.component';
+import { LoginComponent } from './components/login/login.component';
+import { RegisterComponent } from './components/register/register.component';
+import { LadingpageComponent } from './components/ladingpage/ladingpage.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -14,11 +19,17 @@ import { AboutusComponent } from './components/aboutus/aboutus.component';
     HeaderComponent,
     HerosectionComponent,
     HomeComponent,
-    AboutusComponent
+    AboutusComponent,
+    LoginComponent,
+    RegisterComponent,
+    LadingpageComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
