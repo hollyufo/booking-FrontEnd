@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import {HeaderComponent } from './components/header/header.component';
-import {HomeComponent } from './components/home/home.component';
-import { LoginComponent } from './components/login/login.component';
-import { RegisterComponent } from './components/register/register.component';
-import { LadingpageComponent } from './components/ladingpage/ladingpage.component';
+import {HeaderComponent } from './components/pages/header/header.component';
+import {HomeComponent } from './components/pages/home/home.component';
+import { LoginComponent } from './components/auth/login/login.component';
+import { RegisterComponent } from './components/auth/register/register.component';
+import { LadingpageComponent } from './components/pages/ladingpage/ladingpage.component';
 import { AuthguardGuard } from './guards/authguard/authguard.guard';
-import { RoomsComponent } from './components/rooms/rooms.component';
+import { RoomsComponent } from './components/user/rooms/rooms.component';
 
 const routes: Routes = [
   { path: '', component: LadingpageComponent },
