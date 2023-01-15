@@ -18,7 +18,16 @@ export class AuthserviceService {
     localStorage.setItem('token', token);
     // decode token
     const decodedToken = jwtDecode(token);
-
+    // converting the decoded jwt to a json object
+    const data = JSON.stringify(decodedToken);
+    // parsing the json object
+    const json = JSON.parse(data);
+    // saving the user id in the local storage
+    localStorage.setItem('email', json.sub);
+    // saving the user name in the local storage
+    localStorage.setItem('name', json.lastname);
+    // saving the role in the local storage
+    localStorage.setItem('role', json.authorities[0].authority);
     console.log(decodedToken); // Outputs the payload of the JWT as a JavaScript object
   }
   // get token from local storage

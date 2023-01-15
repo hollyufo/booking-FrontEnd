@@ -38,6 +38,8 @@ export class LoginComponent implements OnInit {
           // parsing the json object
           const json = JSON.parse(data);
           const authservice = new AuthserviceService();
+          console.log('testing');
+          console.log(json.token);
           authservice.saveToken(json.token);
           // redirecting to the home page
           this.router.navigate(['/home']);

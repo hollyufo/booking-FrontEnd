@@ -1,0 +1,17 @@
+<app-header></app-header>
+<div class="container">
+  <div class="row row-cols-1 row-cols-md-3 g-4 pt-5">
+    <div class="col" *ngFor="let room of rooms">
+      <div class="card">
+        <img src="{{ room.image }}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Name: {{ room.name }}</h5>
+          <p class="card-text">Price: {{ room.price }}</p>
+          <p class="card-text">description: {{ room.description }}</p>
+          <p class="card-text">hotel: {{ room.hotel.name }}</p>
+          <p class="card-text">capacity: {{ room.capacity }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

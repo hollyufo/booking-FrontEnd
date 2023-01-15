@@ -12,6 +12,8 @@ import { RegisterComponent } from './components/register/register.component';
 import { LadingpageComponent } from './components/ladingpage/ladingpage.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { RoomsComponent } from './components/rooms/rooms.component';
+import { AllusersComponent } from './components/allusers/allusers.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { HttpClientModule } from '@angular/common/http';
     AboutusComponent,
     LoginComponent,
     RegisterComponent,
-    LadingpageComponent
+    LadingpageComponent,
+    RoomsComponent,
+    AllusersComponent
   ],
   imports: [
     BrowserModule,

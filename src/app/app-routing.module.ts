@@ -6,12 +6,14 @@ import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { LadingpageComponent } from './components/ladingpage/ladingpage.component';
 import { AuthguardGuard } from './guards/authguard/authguard.guard';
+import { RoomsComponent } from './components/rooms/rooms.component';
 
 const routes: Routes = [
   { path: '', component: LadingpageComponent },
   { path: 'home', component: HomeComponent , canActivate : [AuthguardGuard]},
   { path: 'login', component: LoginComponent },
   { path: 'register', component:  RegisterComponent},
+  { path: 'rooms', component:  RoomsComponent},
 ];
 
 @NgModule({
