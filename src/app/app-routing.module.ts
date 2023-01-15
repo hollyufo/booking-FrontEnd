@@ -7,13 +7,15 @@ import { RegisterComponent } from './components/auth/register/register.component
 import { LadingpageComponent } from './components/pages/ladingpage/ladingpage.component';
 import { AuthguardGuard } from './guards/authguard/authguard.guard';
 import { RoomsComponent } from './components/user/rooms/rooms.component';
+import { AlluserComponent } from './components/admin/alluser/alluser.component';
 
 const routes: Routes = [
   { path: '', component: LadingpageComponent },
   { path: 'home', component: HomeComponent , canActivate : [AuthguardGuard]},
   { path: 'login', component: LoginComponent },
   { path: 'register', component:  RegisterComponent},
-  { path: 'rooms', component:  RoomsComponent},
+  { path: 'rooms', component:  RoomsComponent, canActivate : [AuthguardGuard]},
+  { path: 'users', component:  AlluserComponent},
 ];
 
 @NgModule({

@@ -1,1 +1,30 @@
-<p>alluser works!</p>
+<app-header></app-header>
+<div class="container mt-5">
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">First name</th>
+        <th scope="col">Last name</th>
+        <th scope="col">is banned</th>
+        <th scope="col">email</th>
+        <th scope="col">role</th>
+        <th scope="col">action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of users">
+        <th scope="row">{{ user.id }}</th>
+        <td>{{ user.firstName }}</td>
+        <td>{{ user.lastName }}</td>
+        <td>{{ user.banned }}</td>
+        <td>{{ user.email }}</td>
+        <td>{{ user.authorities[0].authority}}</td>
+        <td>
+          <button class="btn btn-danger" (click)="banUser(user.id)" >Ban</button>
+          <button class="ms-1 btn btn-primary">view</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

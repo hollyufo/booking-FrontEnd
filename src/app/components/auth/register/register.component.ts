@@ -28,7 +28,7 @@ export class RegisterComponent implements OnInit {
     if (this.registerForm.valid) {
       const url = 'http://localhost:8083/api/v1/auth/register';
       const body = {
-        name: this.registerForm.get('firstName')?.value,
+        firstName: this.registerForm.get('firstName')?.value,
         lastName: this.registerForm.get('lastName')?.value,
         userName: this.registerForm.get('userName')?.value,
         email: this.registerForm.get('email')?.value,
