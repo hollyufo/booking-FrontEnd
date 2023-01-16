@@ -16,6 +16,8 @@ import { AlluserComponent } from './components/admin/alluser/alluser.component';
 import { HotelsComponent } from './components/admin/hotels/hotels.component';
 import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
 import { SingleuserComponent } from './components/admin/singleuser/singleuser.component';
+import { ManagerhotelComponent } from './components/manager/managerhotel/managerhotel.component';
+import { ManagerroomsComponent } from './components/manager/managerrooms/managerrooms.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +33,8 @@ import { SingleuserComponent } from './components/admin/singleuser/singleuser.co
     AlluserComponent,
     HotelsComponent,
     SingleuserComponent,
+    ManagerhotelComponent,
+    ManagerroomsComponent,
   ],
   imports: [
     BrowserModule,

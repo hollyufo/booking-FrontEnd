@@ -1,3 +1,4 @@
+
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import {HeaderComponent } from './components/pages/header/header.component';
@@ -10,6 +11,9 @@ import { RoomsComponent } from './components/user/rooms/rooms.component';
 import { AlluserComponent } from './components/admin/alluser/alluser.component';
 import { SingleuserComponent } from './components/admin/singleuser/singleuser.component';
 import { HotelsComponent } from './components/admin//hotels/hotels.component';
+import { ManagerhotelComponent } from './components/manager/managerhotel/managerhotel.component';
+import { ManagerroomsComponent } from './components/manager/managerrooms/managerrooms.component';
+
 
 const routes: Routes = [
   { path: '', component: LadingpageComponent },
@@ -20,6 +24,8 @@ const routes: Routes = [
   { path: 'users', component:  AlluserComponent},
   { path: 'users/:id', component:  SingleuserComponent},
   { path: 'hotels', component:  HotelsComponent},
+  { path: 'managerhotels', component:  ManagerhotelComponent},
+  { path: 'managerrooms', component:  ManagerroomsComponent},
 ];
 
 @NgModule({
