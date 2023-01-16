@@ -1,0 +1,29 @@
+<div class="container mt-5">
+  <form [formGroup]="updateForm" (ngSubmit)="updateUserRole(user.id)">
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">Email address</label>
+      <input value="{{user.email}}"  disabled type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label">First Name</label>
+      <input value="{{user.firstName}}" disabled type="text" class="form-control" id="exampleInputPassword1">
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label">Last Name</label>
+      <input value="{{user.lastName}}"  disabled type="text" class="form-control" id="exampleInputPassword1">
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label">isbanned</label>
+      <input  value="{{user.banned}}"  disabled type="text" class="form-control" id="exampleInputPassword1">
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label">Role</label>
+      <select formControlName="role" class="form-select" aria-label="Default select example">
+        <option [selected]="user.authorities[0].authority === 'ADMIN'" value="ADMIN" value="ADMIN">ADMIN</option>
+        <option [selected]="user.authorities[0].authority === 'MANAGER'" value="MANAGER" value="MANAGER">MANAGER</option>
+        <option  [selected]="user.authorities[0].authority === 'USER'" value="USER" value="USER">USER</option>
+      </select>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>

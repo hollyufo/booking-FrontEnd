@@ -21,8 +21,8 @@
         <td>{{ user.email }}</td>
         <td>{{ user.authorities[0].authority}}</td>
         <td>
-          <button class="btn btn-danger" (click)="banUser(user.id)" >Ban</button>
-          <button class="ms-1 btn btn-primary">view</button>
+          <button class="btn btn-danger" (click)="banUser(user.id)" >{{ getButtonText(user) }}</button>
+          <button class="ms-1 btn btn-primary" (click)="viewUser(user.id)">view</button>
         </td>
       </tr>
     </tbody>

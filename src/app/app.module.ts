@@ -14,6 +14,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { RoomsComponent } from './components/user/rooms/rooms.component';
 import { AlluserComponent } from './components/admin/alluser/alluser.component';
 import { HotelsComponent } from './components/admin/hotels/hotels.component';
+import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
+import { SingleuserComponent } from './components/admin/singleuser/singleuser.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +30,7 @@ import { HotelsComponent } from './components/admin/hotels/hotels.component';
     RoomsComponent,
     AlluserComponent,
     HotelsComponent,
+    SingleuserComponent,
   ],
   imports: [
     BrowserModule,
@@ -35,6 +38,7 @@ import { HotelsComponent } from './components/admin/hotels/hotels.component';
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
+    SweetAlert2Module.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
