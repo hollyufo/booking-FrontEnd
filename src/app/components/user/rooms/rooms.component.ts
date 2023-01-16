@@ -21,14 +21,17 @@ export class RoomsComponent {
       this.http.get(this.url, { headers: this.headers }).subscribe((response) => {
           console.log(response);
           this.rooms = response;
+          console.log(this.rooms);
       }, (error) => {
           if(error.status === 401) {
               // redirect to login page
-              this.router.navigate(['/login']);
+              //this.router.navigate(['/login']);
+              console.log("401");
           }
           if(error.status === 403) {
               // redirect to login page
-              this.router.navigate(['/login']);
+              //this.router.navigate(['/login']);
+              console.log("403");
           }
           console.log(error);
       });

@@ -1,1 +1,15 @@
-<p>hotels works!</p>
+<app-header></app-header>
+<div class="container">
+  <div class="row row-cols-1 row-cols-md-3 g-4 pt-5">
+    <div class="col" *ngFor="let hotel of hotels">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Name: {{ hotel.name }}</h5>
+          <p class="card-text">Manager: {{ hotel.manager.firstName }}</p>
+          <p class="card-text">City: {{ hotel.city.name }}</p>
+          <button (click)="approveHotel(hotel.id)" class="btn btn-primary">{{getButtonText(hotel)}}</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
