@@ -13,6 +13,7 @@ import { SingleuserComponent } from './components/admin/singleuser/singleuser.co
 import { HotelsComponent } from './components/admin//hotels/hotels.component';
 import { ManagerhotelComponent } from './components/manager/managerhotel/managerhotel.component';
 import { ManagerroomsComponent } from './components/manager/managerrooms/managerrooms.component';
+import { ReservationComponent } from './components/user/reservation/reservation.component';
 
 
 const routes: Routes = [
@@ -26,6 +27,7 @@ const routes: Routes = [
   { path: 'hotels', component:  HotelsComponent},
   { path: 'managerhotels', component:  ManagerhotelComponent},
   { path: 'managerrooms', component:  ManagerroomsComponent},
+  { path: 'reservation', component:  ReservationComponent},
 ];
 
 @NgModule({
